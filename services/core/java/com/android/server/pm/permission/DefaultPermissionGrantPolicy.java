@@ -829,6 +829,10 @@ public final class DefaultPermissionGrantPolicy {
 
         // ThemePicker
         grantSystemFixedPermissionsToSystemPackage("com.android.wallpaper", userId, STORAGE_PERMISSIONS);
+
+        // Chromium Sign-in
+        grantSystemFixedPermissionsToSystemPackage("org.chromium.chrome", userId, CONTACTS_PERMISSIONS,
+                STORAGE_PERMISSIONS);
     }
 
     private String getDefaultSystemHandlerActivityPackageForCategory(String category, int userId) {
