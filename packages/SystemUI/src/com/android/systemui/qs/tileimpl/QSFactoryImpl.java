@@ -56,6 +56,7 @@ import com.android.systemui.qs.tiles.SyncTile;
 import com.android.systemui.qs.tiles.SoundTile;
 import com.android.systemui.qs.tiles.ScreenRecordTile;
 import com.android.systemui.qs.tiles.ScreenshotTile;
+import com.android.systemui.qs.tiles.ScreenStabilizationTile;
 import com.android.systemui.qs.tiles.UserTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
@@ -248,6 +249,8 @@ public class QSFactoryImpl implements QSFactory {
                 return mImmersiveTileProvider.get();
             case "caffeine":
                 return mCaffeineTileProvider.get();
+	    case "screenstabilization":
+		return new ScreenStabilizationTile(mHost);
         }
 
         // Intent tiles.
