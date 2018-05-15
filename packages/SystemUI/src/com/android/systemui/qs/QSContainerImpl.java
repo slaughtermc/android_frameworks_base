@@ -27,6 +27,7 @@ import android.graphics.Point;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.graphics.PorterDuff.Mode;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -71,6 +72,8 @@ public class QSContainerImpl extends FrameLayout implements
     private Drawable mCurrentBackground;
     private boolean mLandscape;
     private boolean mQsBackgroundAlpha;
+    private int mQsBackGroundAlpha;
+    private int mQsBackGroundColor;
     private int mHeaderImageHeight;
     private boolean mForceHideQsStatusBar;
 
@@ -150,6 +153,9 @@ public class QSContainerImpl extends FrameLayout implements
             getContext().getContentResolver().registerContentObserver(Settings.System
                             .getUriFor(Settings.System.STATUS_BAR_CUSTOM_HEADER_HEIGHT), false,
                     this, UserHandle.USER_ALL);
+            getContext().getContentResolver().registerContentObserver(Settings.System
+                    .getUriFor(Settings.System.QS_PANEL_BG_COLOR), false,
+                    this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -160,25 +166,24 @@ public class QSContainerImpl extends FrameLayout implements
 
     private void updateSettings() {
         ContentResolver resolver = getContext().getContentResolver();
-        int bgAlpha = Settings.System.getIntForUser(resolver,
+        mQsBackGroundAlpha = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_PANEL_BG_ALPHA, 255,
                 UserHandle.USER_CURRENT);
-
-        Drawable bg = mBackground.getBackground();
-        if (bgAlpha < 255 ) {
-            mQsBackgroundAlpha = true;
-            bg.setAlpha(bgAlpha);
-            mBackground.setBackground(bg);
-            mBackgroundGradient.setVisibility(View.INVISIBLE);
-        } else {
-            mQsBackgroundAlpha = false;
-            bg.setAlpha(255);
-            mBackground.setBackground(bg);
-            mBackgroundGradient.setVisibility(View.VISIBLE);
-        }
+        mQsBackGroundColor = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_PANEL_BG_COLOR, Color.WHITE,
+                UserHandle.USER_CURRENT);
         updateHeaderImageHeight();
         updateResources();
         updateStatusbarVisibility();
+        setQsBackground();
+    }
+
+    private void setQsBackground() {
+        if (mQsBackGround != null) {
+            mQsBackGround.setColorFilter(mQsBackGroundColor, PorterDuff.Mode.SRC_ATOP);
+            mQsBackGround.setAlpha(mQsBackGroundAlpha);
+            mBackground.setBackground(mQsBackGround);
+        }
     }
 
     @Override
