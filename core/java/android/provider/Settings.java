@@ -5246,6 +5246,10 @@ public final class Settings {
          */
         public static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
 
+        /** @hide */
+        private static final Validator QS_PANEL_BG_ALPHA_VALIDATOR = new
+                SettingsValidators.InclusiveIntegerRangeValidator(100, 255);
+
         /**
          * Color of the qs panel
          * @hide
@@ -6660,6 +6664,7 @@ public final class Settings {
             NAVIGATION_HANDLE_WIDTH,
             LOCKSCREEN_CHARGING_ANIMATION_STYLE,
             QS_PANEL_BG_USE_NEW_TINT,
+            QS_PANEL_BG_ALPHA,
             QS_PANEL_BG_COLOR,
             QS_PANEL_BG_COLOR_WALL,
             QS_PANEL_BG_USE_WALL,
@@ -6882,6 +6887,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_VIEW_LOCATION);
             PRIVATE_SETTINGS.add(HEADSET_CONNECT_PLAYER);
             PRIVATE_SETTINGS.add(QS_PANEL_BG_USE_NEW_TINT);
+            PRIVATE_SETTINGS.add(QS_PANEL_BG_ALPHA);
             PRIVATE_SETTINGS.add(QS_PANEL_BG_COLOR);
             PRIVATE_SETTINGS.add(QS_PANEL_BG_COLOR_WALL);
             PRIVATE_SETTINGS.add(QS_PANEL_BG_USE_WALL);
@@ -7066,6 +7072,7 @@ public final class Settings {
             VALIDATORS.put(FORCE_SHOW_NAVBAR, FORCE_SHOW_NAVBAR_VALIDATOR);
             VALIDATORS.put(LOCKSCREEN_CHARGING_ANIMATION_STYLE, LOCKSCREEN_CHARGING_ANIMATION_STYLE_VALIDATOR);
             VALIDATORS.put(QS_PANEL_BG_USE_NEW_TINT, QS_PANEL_BG_USE_NEW_TINT_VALIDATOR);
+            VALIDATORS.put(QS_PANEL_BG_ALPHA, QS_PANEL_BG_ALPHA_VALIDATOR);
             VALIDATORS.put(QS_PANEL_BG_COLOR, QS_PANEL_BG_COLOR_VALIDATOR);
             VALIDATORS.put(QS_PANEL_BG_COLOR_WALL, QS_PANEL_BG_COLOR_WALL_VALIDATOR);
             VALIDATORS.put(QS_PANEL_BG_USE_WALL, QS_PANEL_BG_USE_WALL_VALIDATOR);
