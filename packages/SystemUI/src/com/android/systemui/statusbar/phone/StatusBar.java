@@ -2451,7 +2451,8 @@ public class StatusBar extends SystemUI implements DemoMode,
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_WALL))) {
                 updateQSPanel();
                 mQSPanel.getHost().reloadAllTiles();
-            } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_FW)) ||
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_NEW_TINT)) ||
+                    uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_USE_FW)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_COLOR)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_BG_COLOR_WALL))) {
                 mQSPanel.getHost().reloadAllTiles();
@@ -4491,6 +4492,9 @@ public class StatusBar extends SystemUI implements DemoMode,
                 int mColorInt = mColor.toArgb();
                 Settings.System.putIntForUser(mContext.getContentResolver(),
                         Settings.System.QS_PANEL_BG_COLOR_WALL, mColorInt, UserHandle.USER_CURRENT);
+            } else {
+                Settings.System.putIntForUser(mContext.getContentResolver(),
+                        Settings.System.QS_PANEL_BG_COLOR_WALL, Color.WHITE, UserHandle.USER_CURRENT);
             }
         }
     }
