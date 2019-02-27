@@ -5932,6 +5932,12 @@ public final class Settings {
         public static final String KEY_HOME_LONG_PRESS_CUSTOM_APP = "key_home_long_press_custom_app";
 
         /**
+         * Launch custom activity when home key is long-pressed.
+         * @hide
+         */
+        public static final String KEY_HOME_LONG_PRESS_CUSTOM_ACTIVITY = "key_home_long_press_custom_activity";
+
+        /**
          * Display friendly name of custom application launched when
          * home key is long-pressed.
          * @hide
@@ -5951,6 +5957,12 @@ public final class Settings {
          * @hide
          */
         public static final String KEY_HOME_DOUBLE_TAP_CUSTOM_APP = "key_home_double_tap_custom_app";
+
+        /**
+         * Launch custom activity when home key is double-tapped.
+         * @hide
+         */
+        public static final String KEY_HOME_DOUBLE_TAP_CUSTOM_ACTIVITY = "key_home_double_tap_custom_activity";
 
         /**
          * Display friendly name of custom application launched when
@@ -5982,6 +5994,12 @@ public final class Settings {
         public static final String KEY_BACK_LONG_PRESS_CUSTOM_APP = "key_back_long_press_custom_app";
 
         /**
+         * Launch custom activity when back key is long-pressed.
+         * @hide
+         */
+        public static final String KEY_BACK_LONG_PRESS_CUSTOM_ACTIVITY = "key_back_long_press_custom_activity";
+
+        /**
          * Display friendly name of custom application launched when
          * back key is long-pressed.
          * @hide
@@ -6001,6 +6019,12 @@ public final class Settings {
          * @hide
          */
         public static final String KEY_BACK_DOUBLE_TAP_CUSTOM_APP = "key_back_double_tap_custom_app";
+
+        /**
+         * Launch custom activity when back key is double tapped.
+         * @hide
+         */
+        public static final String KEY_BACK_DOUBLE_TAP_CUSTOM_ACTIVITY = "key_back_double_tap_custom_activity";
 
         /**
          * Display friendly name of custom application launched when
@@ -6048,6 +6072,12 @@ public final class Settings {
         public static final String KEY_APP_SWITCH_LONG_PRESS_CUSTOM_APP = "key_app_switch_long_press_custom_app";
 
         /**
+         * Launch custom activity when app switch key is long-pressed.
+         * @hide
+         */
+        public static final String KEY_APP_SWITCH_LONG_PRESS_CUSTOM_ACTIVITY = "key_app_switch_long_press_custom_activity";
+
+        /**
          * Display friendly name of custom application launched when
          * app switch key is long-pressed.
          * @hide
@@ -6068,6 +6098,12 @@ public final class Settings {
          * @hide
          */
         public static final String KEY_APP_SWITCH_DOUBLE_TAP_CUSTOM_APP = "key_app_switch_double_tap_custom_app";
+
+        /**
+         * Launch custom activity when app switch key is double-tapped.
+         * @hide
+         */
+        public static final String KEY_APP_SWITCH_DOUBLE_TAP_CUSTOM_ACTIVITY = "key_app_switch_double_tap_custom_activity";
 
         /**
          * Display friendly name of custom application launched when
