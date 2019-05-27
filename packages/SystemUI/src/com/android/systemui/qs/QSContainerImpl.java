@@ -232,7 +232,6 @@ public class QSContainerImpl extends FrameLayout implements
         } else {
             if (mQsBackGround != null) {
                 mQsBackGround.setColorFilter(currentColor, PorterDuff.Mode.SRC_ATOP);
-                mQsBackGround.setAlpha(mQsBackGroundAlpha);
             }
             try {
                 mOverlayManager.setEnabled("com.android.systemui.qstheme.color",
@@ -242,6 +241,8 @@ public class QSContainerImpl extends FrameLayout implements
             }
         }
 
+        if (mQsBackGround != null)
+            mQsBackGround.setAlpha(mQsBackGroundAlpha);
         if (mQsBackGround != null && mBackground != null) {
             mBackground.setBackground(mQsBackGround);
         }
