@@ -6265,6 +6265,11 @@ public final class Settings {
 
         private static final Validator STATUS_BAR_CUSTOM_HEADER_HEIGHT_VALIDATOR = ANY_INTEGER_VALIDATOR;
 
+        /** FOD pressed state
+         * @hide
+         */
+        public static final String FOD_PRESSED_STATE = "fod_pressed_state";
+
         /**
          * Width of the navigation handle.
          * @hide
