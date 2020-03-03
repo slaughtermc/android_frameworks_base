@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019 The PixelDust Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <dimen name="qs_tile_height_wo_label">48dp</dimen>
+
+    <dimen name="battery_bar_view_height">6dp</dimen>
+
+    <!-- Burn-in protection -->
+    <dimen name="horizontal_max_swift">3.0dp</dimen>
+    <dimen name="vertical_max_swift">1.0dp</dimen>
+
+    <!-- Custom header -->
+    <dimen name="qs_header_image_offset">25dp</dimen>
+    <dimen name="qs_header_image_side_margin">4dp</dimen>
+    <dimen name="qs_header_image_top_margin">4dp</dimen>
+    <dimen name="qs_header_image_bottom_margin">4dp</dimen>
+
+    <!-- Network traffic monitor -->
+    <dimen name="net_traffic_multi_text_size">8dp</dimen>
+    <dimen name="net_traffic_txt_img_padding">4dp</dimen>
+
+    <!-- The starting padding for the clock in the status bar. -->
+    <dimen name="status_bar_right_clock_starting_padding">2dp</dimen>
+
+    <!-- the padding on the start and the end of the statusbar -->
+    <dimen name="status_bar_extra_padding">0dp</dimen>
+
+	<!-- Sets a custom extra padding for the QS icons and statusbar date -->
+	<dimen name="qs_items_padding">0dp</dimen>
+
+    <!-- Custom Carrier Label -->
+    <dimen name="status_bar_carrier_height">11dp</dimen>
+
+    <!-- Status bar notification ticker -->
+    <dimen name="ticker_start_padding">6dp</dimen>
+    <dimen name="ticker_icon_end_margin">4dp</dimen>
+    <dimen name="ticker_text_top_padding">2dp</dimen>
+    <dimen name="ticker_text_end_padding">10dp</dimen>
+
+    <!-- Volume panel -->
+    <dimen name="volume_dialog_panel_transparent_padding_left">20dp</dimen>
+
+   <dimen name="fod_animation_size">280dp</dimen>  
+
+    <!-- Pixel navbar -->
+    <dimen name="halo_diameter">22dp</dimen>
+    <dimen name="opa_diamond_translation">16dp</dimen>
+    <dimen name="opa_disabled_home_diameter">32dp</dimen>
+    <dimen name="opa_dot_diam">10dp</dimen>
+    <dimen name="opa_line_x_collapse_bg">46dp</dimen>
+    <dimen name="opa_line_x_collapse_ry">15dp</dimen>
+    <dimen name="opa_line_x_trans_bg">30dp</dimen>
+    <dimen name="opa_line_x_trans_ry">15dp</dimen>
+    <dimen name="opa_line_y_translation">16dp</dimen>
+
+</resources>
