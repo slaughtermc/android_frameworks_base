@@ -23,6 +23,7 @@ import android.app.ActivityManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.om.IOverlayManager;
+import android.content.res.ColorUtils;
 import android.content.res.Configuration;
 import android.database.ContentObserver;
 import android.graphics.Point;
@@ -192,12 +193,12 @@ public class QSContainerImpl extends FrameLayout implements
         mQsBackGroundAlpha = Settings.System.getIntForUser(resolver,
                 Settings.System.QS_PANEL_BG_ALPHA, 255,
                 UserHandle.USER_CURRENT);
-        mQsBackGroundColor = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_BG_COLOR, Color.WHITE,
-                UserHandle.USER_CURRENT);
-        mQsBackGroundColorWall = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_PANEL_BG_COLOR_WALL, Color.WHITE,
-                UserHandle.USER_CURRENT);
+        mQsBackGroundColor = ColorUtils.getValidQsColor(Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_PANEL_BG_COLOR, ColorUtils.genRandomQsColor(),
+                UserHandle.USER_CURRENT));
+        mQsBackGroundColorWall = ColorUtils.getValidQsColor(Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_PANEL_BG_COLOR_WALL, ColorUtils.genRandomQsColor(),
+                UserHandle.USER_CURRENT));
         int userQsWallColorSetting = Settings.System.getIntForUser(getContext().getContentResolver(),
                     Settings.System.QS_PANEL_BG_USE_WALL, 0, UserHandle.USER_CURRENT);
         mSetQsFromWall = userQsWallColorSetting == 1;
