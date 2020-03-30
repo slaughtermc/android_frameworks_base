@@ -16,6 +16,7 @@
 
 package com.android.systemui.biometrics;
 
+import android.app.admin.DevicePolicyManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Configuration;
