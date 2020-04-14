@@ -341,11 +341,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".screenrecord.ScreenRecordDialog"
-            android:excludeFromRecents="true"
-            android:theme="@style/ScreenRecordStyle" />
-        <service android:name=".screenrecord.RecordingService" />
-
         <receiver android:name=".SysuiRestartReceiver"
             android:exported="false">
             <intent-filter>
