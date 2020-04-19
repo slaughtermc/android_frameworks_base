@@ -12,10 +12,6 @@
      limitations under the License.
 -->
 <resources>
-
-    <!-- QS date color-->
-    <color name="qs_date_color">#FFFFFFFF</color>
-
     <color name="recents_dismiss_all_background_color">@color/GM2_grey_900</color>
     <color name="recents_dismiss_all_background_color_ripple">#555555</color>
     <color name="recents_dismiss_all_icon_color">@android:color/white</color>
