@@ -85,8 +85,8 @@ public class Installer extends SystemService {
     public static final int FLAG_USE_QUOTA = IInstalld.FLAG_USE_QUOTA;
     public static final int FLAG_FORCE = IInstalld.FLAG_FORCE;
 
-    public static final int FLAG_CLEAR_APP_DATA_KEEP_ART_PROFILES =
-            IInstalld.FLAG_CLEAR_APP_DATA_KEEP_ART_PROFILES;
+
+
 
     private final boolean mIsolated;
 
