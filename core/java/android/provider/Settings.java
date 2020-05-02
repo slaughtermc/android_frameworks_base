@@ -6335,30 +6335,13 @@ public final class Settings {
         /** @hide */
         private static final Validator QS_PANEL_BG_USE_NEW_TINT_VALIDATOR = BOOLEAN_VALIDATOR;
 
-        /**
-         * Quick Settings Smart Pulldown
-         * @hide
-         */
-        public static final String QS_SMART_PULLDOWN = "qs_smart_pulldown";
 
-        /**
-         * Whether to show charging animation on lock screen
-         * @hide
-         */
-        public static final String LOCKSCREEN_CHARGING_ANIMATION_STYLE = "lockscreen_charging_animation_style";
 
-        private static final Validator LOCKSCREEN_CHARGING_ANIMATION_STYLE_VALIDATOR =
-                new SettingsValidators.InclusiveIntegerRangeValidator(0, 5);
 
-        /**
-         * Whether to use new QS panel bg tint or not
-         * @hide
-         */
-        public static final String QS_PANEL_BG_USE_NEW_TINT = "qs_panel_bg_use_new_tint";
 
-        /** @hide */
-        private static final Validator QS_PANEL_BG_USE_NEW_TINT_VALIDATOR = BOOLEAN_VALIDATOR;
 
+
+        
         /**
          * Whether allowing pocket service to register sensors and dispatch informations.
          *   0 = disabled
